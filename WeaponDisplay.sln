@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31829.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeaponDisplay", "WeaponDisplay.csproj", "{18AE2FF5-79AC-4072-BD7A-47D3A73E78DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18AE2FF5-79AC-4072-BD7A-47D3A73E78DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18AE2FF5-79AC-4072-BD7A-47D3A73E78DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18AE2FF5-79AC-4072-BD7A-47D3A73E78DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18AE2FF5-79AC-4072-BD7A-47D3A73E78DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {633303E6-A346-4169-BA7D-0CCF82CA8CA5}
+	EndGlobalSection
+EndGlobal

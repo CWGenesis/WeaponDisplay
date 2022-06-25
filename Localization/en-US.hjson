@@ -1,0 +1,70 @@
+Mods: {
+	WeaponDisplay: {
+		ItemName: {
+			旧日支配者:Great Old Ones
+			真旧日支配者:True Great Old Ones
+			第一分形:First Fractal
+		}
+		ItemTooltip:{
+			旧日支配者:"This power has not fully awakened"
+		}
+		Config:{
+			Label:Visual Settings
+			head1:Weapon Display
+			1:Dye used in weapons
+			2:The dye effect of the selected armor slot will be applied to the displayed weapon.
+			3:Weapon glowmask drawing switch
+			4:Yes, to turn on the weapon glowmask drawing(It will only take effect when the body armor has a glowmask, the effect is the same as the armor glowmask), no, to cancel. Default is No
+			5:Weapon glowmask brightness
+			6:Adjust the brightness of weapon glowmask
+			head2:Item Effect
+			head3:Slash Visual Effect (affects only the visual effect, not the gameplay)
+			7:More cool slashing effects
+			8:"Are you tired with the vanilla melee swing style? \n If you want to affect the actual attack effect, please go to the gameplay settings to open the hitbox"
+			9:Item light effect in world
+			10:Yes, to turn on the lighting effect of items in world, No, to cancel. Default is Yes
+			11:Weapon display size
+			12:Adjust the display size of weapons
+			13:Slash effect brightness
+			14:Brightness greater than 0.5 will use high-brightness slashing
+			15:Slashing effect color
+			16:Yes, associate the slashing effect color with the diagonal color of the enabled weapon map, no, use a single color. Default is Yes
+			17:Weapon and weapon swing effects remain bright
+			18:Weapon and weapon swing effects will not be affected by ambient light
+			19:Cancel the effect of the new slashing effect on tools
+			20:Yes, to cancel the effect of the new slashing effect on the tool, No, not cancel, the default is No
+			23:The type of Item light effect in world
+			New1:武器的挥砍尺寸
+			New2:调整武器的挥砍尺寸
+			New3:刀光削减速度
+			New4:越小刀光拖得越长,调到最大刀光就没了
+			New5:刀光饱和度
+			New6:在默认的饱和度的基础上进行调整,只对刀光有效
+			New7:刀光透明度
+			New8:调整刀光的透明度
+			New9:刀光种类
+			New10:选择不同的刀光
+		}
+		ConfigurationServer:{
+			Label:Gameplay Settings
+			
+			SlashSettings:Slash Gameplay Effect (affects only the gameplay, not the visual effect)
+			HitboxName:Use a new hitbox that matches the swing effect
+			HitboxTooltip:Yes, to enable a new hitbox for the weapon, no, to use the vanilla hitbox. Default is Yes
+			AttackablesName:Melee Slash Attackable Enemies Amount
+			AttackablesTooltip:Maximum number of enemies that can be damaged at one swing of the weapon.
+			New1:武器挥砍角度
+			New2:调整武器的挥砍角度
+			New3:武器挥砍角度最大偏移
+			New4:此值大于零时,每次挥砍将出现小于此值的偏移
+			New5:武器挥舞跟随鼠标
+			New6:开启后,鼠标随武器快速摆动可以加大武器的挥舞范围(也可能减小)
+
+			Parry:Parry Settings
+			ParryName:Weapon Parry
+			ParryTooltip:"If yes, the weapons listed below will be able to parry attacks.\nUseful only when equipped with shield accessories"
+			ParryListName:Add parry effect to these weapons:
+			ParryListTooltip:List of weapons that can be used for parrying
+		}
+	}
+}
