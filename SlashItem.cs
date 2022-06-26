@@ -63,7 +63,12 @@ namespace WeaponDisplay
         public override void UseStyle(Item item, Player player, Rectangle heldItemFrame)
         {
             PlayerSlash modplayer = player.GetModPlayer<PlayerSlash>();
-            if (PlayerSlash.UseNewSlashEffect && modplayer.DrawPos != Vector2.Zero)
+            bool New = PlayerSlash.UseNewSlashEffect && item.useStyle == ItemUseStyleID.Swing && item.DamageType == DamageClass.Melee && !item.noUseGraphic && item.damage > 0 && player.itemAnimation > 0;
+            if (PlayerSlash.ToolsNoUse)
+            {
+                New = New && player.HeldItem.axe == 0 && player.HeldItem.hammer == 0 && player.HeldItem.pick == 0;
+            }
+            if (PlayerSlash.UseNewSlashEffect && New && modplayer.DrawPos != Vector2.Zero)
             {
                 var factor = (float)(player.itemAnimation - 1) / (player.itemAnimationMax - 1);//物品挥动程度的插值，这里应该是从1到0
                 //if (factor == 0) {modPlayer.Reverse = !modPlayer.Reverse;modPlayer.SlashOffset = Main.rand.NextFloat(-SlashMaxOffset, SlashMaxOffset); }这一段应该在绘制之后

@@ -68,6 +68,7 @@ namespace WeaponDisplay
             }
             if (New)
             {
+                //Main.NewText("New");
                 try
                 {
                     Texture2D itemTex = TextureAssets.Item[num].Value;
