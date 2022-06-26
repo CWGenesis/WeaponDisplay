@@ -11,6 +11,16 @@ namespace WeaponDisplay
         public override ConfigScope Mode => ConfigScope.ClientSide;
 
         [Header("$Mods.WeaponDisplay.Config.head1")]
+        [DefaultValue(true)]
+        [Label("$Mods.WeaponDisplay.Config.New11")]
+        [Tooltip("$Mods.WeaponDisplay.Config.New12")]
+        public bool ShowWeapon;
+
+        [DefaultValue(false)]
+        [Label("$Mods.WeaponDisplay.Config.New13")]
+        [Tooltip("$Mods.WeaponDisplay.Config.New14")]
+        public bool PlayerShowWeapon;
+
         [Label("$Mods.WeaponDisplay.Config.1")]
         [Tooltip("$Mods.WeaponDisplay.Config.2")]
         [DefaultValue(DyeSlot.None)]
@@ -126,6 +136,8 @@ namespace WeaponDisplay
         {
             //PlayerSlash.IsLighterDecider = IsLighterDecider;
             //PlayerSlash.UseItemTexForSwoosh = UseItemTexForSwoosh;
+            WeaponDisplayPlayer.ShowWeapon = ShowWeapon;
+            WeaponDisplayPlayer.PlayerShowWeapon = PlayerShowWeapon;
             PlayerSlash.LightWeaponAndEffect = ItemAdditive;
             PlayerSlash.ToolsNoUse = ToolsNoUseNewSwooshEffect;
             PlayerSlash.UseNewSlashEffect = CoolerSwooshActive;

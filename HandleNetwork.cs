@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 
 namespace WeaponDisplay
 {
@@ -10,12 +9,15 @@ namespace WeaponDisplay
             BasicStats,
             Hitbox
         }
-
-        internal static void HandlePacket(BinaryReader reader, int whoAmI) {
+        internal static void HandlePacket(BinaryReader reader, int whoAmI)
+        {
             MessageType msgType = (MessageType)reader.ReadByte();
-            if (Main.netMode == NetmodeID.Server) {
-                switch (msgType) {
-                    case MessageType.BasicStats: {
+            if (Main.netMode == NetmodeID.Server)
+            {
+                switch (msgType)
+                {
+                    case MessageType.BasicStats:
+                        {
                             bool negativeDir = reader.ReadBoolean();
                             float rotationForShadow = reader.ReadSingle();
                             float kValue = reader.ReadSingle();
@@ -36,7 +38,8 @@ namespace WeaponDisplay
                             packet.Send(-1, whoAmI);
                             return;
                         }
-                    case MessageType.Hitbox: {
+                    case MessageType.Hitbox:
+                        {
                             var HitboxPosition = reader.ReadPackedVector2();
                             WeaponDisplayPlayer modPlayer = Main.player[whoAmI].GetModPlayer<WeaponDisplayPlayer>();
                             modPlayer.HitboxPosition = HitboxPosition;
@@ -53,9 +56,12 @@ namespace WeaponDisplay
                 WeaponDisplay.Instance.Logger.Debug($"Unknown Message type: {msgType}, Please contact the mod developers");
                 return;
             }
-            else {
-                switch (msgType) {
-                    case MessageType.BasicStats: {
+            else
+            {
+                switch (msgType)
+                {
+                    case MessageType.BasicStats:
+                        {
                             bool negativeDir = reader.ReadBoolean();
                             float rotationForShadow = reader.ReadSingle();
                             float kValue = reader.ReadSingle();
@@ -69,7 +75,8 @@ namespace WeaponDisplay
                             modPlayer.UseSlash = UseSlash;
                             return;
                         }
-                    case MessageType.Hitbox: {
+                    case MessageType.Hitbox:
+                        {
                             var HitboxPosition = reader.ReadPackedVector2();
                             int playerIndex = reader.ReadByte();
 
