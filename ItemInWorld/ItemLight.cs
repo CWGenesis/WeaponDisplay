@@ -27,9 +27,11 @@ namespace WeaponDisplay.ItemInWorld
                     baseColor.A = 0;
                     float k = (lightColor.R / 255f + lightColor.G / 255f + lightColor.B / 255f) / 3f;
 
-                    spriteBatch.Draw(texture, item.Center - Main.screenPosition, rectangle, baseColor * k, (float)(Main.time * 0.005f), texture.Size() * 0.5f, lightscale * scale, SpriteEffects.None, 0f);
+                    double time = Main.gameTimeCache.TotalGameTime.TotalSeconds;
+                    //Main.NewText($"{time}");
+                    spriteBatch.Draw(texture, item.Center - Main.screenPosition, rectangle, baseColor * k, (float)(time * 0.3f), texture.Size() * 0.5f, lightscale * scale, SpriteEffects.None, 0f);
                     if (lightStyle == 2) {
-                        spriteBatch.Draw(texture, item.Center - Main.screenPosition, rectangle, baseColor * k, (float)(Main.time * 0.005f) + MathHelper.PiOver2, texture.Size() * 0.5f, lightscale * scale, SpriteEffects.None, 0f);
+                        spriteBatch.Draw(texture, item.Center - Main.screenPosition, rectangle, baseColor * k, (float)(time * 0.3f) + MathHelper.PiOver2, texture.Size() * 0.5f, lightscale * scale, SpriteEffects.None, 0f);
                     }
                 }
             }

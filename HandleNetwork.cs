@@ -18,22 +18,23 @@ namespace WeaponDisplay
                 {
                     case MessageType.BasicStats:
                         {
-                            bool negativeDir = reader.ReadBoolean();
-                            float rotationForShadow = reader.ReadSingle();
-                            float kValue = reader.ReadSingle();
-                            bool UseSlash = reader.ReadBoolean();
-                            WeaponDisplayPlayer modPlayer = Main.player[whoAmI].GetModPlayer<WeaponDisplayPlayer>();
-                            modPlayer.negativeDir = negativeDir;
-                            modPlayer.rotationForShadow = rotationForShadow;
-                            modPlayer.kValue = kValue;
-                            modPlayer.UseSlash = UseSlash;
+                            //bool negativeDir = reader.ReadBoolean();
+                            //float rotationForShadow = reader.ReadSingle();
+                            //float kValue = reader.ReadSingle();
+                            //bool UseSlash = reader.ReadBoolean();
+                            float mouseToPlayerRot = reader.ReadSingle();
+                            PlayerSlash modPlayer = Main.player[whoAmI].GetModPlayer<PlayerSlash>();
+                            modPlayer.MouseToPlayerRot = mouseToPlayerRot;
+                            //modPlayer.rotationForShadow = rotationForShadow;
+                            //modPlayer.kValue = kValue;
+                            //modPlayer.UseSlash = UseSlash;
 
                             ModPacket packet = WeaponDisplay.Instance.GetPacket();
                             packet.Write((byte)MessageType.BasicStats);
-                            packet.Write(negativeDir);
-                            packet.Write(rotationForShadow);
-                            packet.Write(kValue);
-                            packet.Write(UseSlash);
+                            packet.Write(mouseToPlayerRot);
+                            //packet.Write(rotationForShadow);
+                            //packet.Write(kValue);
+                            //packet.Write(UseSlash);
                             packet.Write((byte)whoAmI);
                             packet.Send(-1, whoAmI);
                             return;
@@ -41,8 +42,8 @@ namespace WeaponDisplay
                     case MessageType.Hitbox:
                         {
                             var HitboxPosition = reader.ReadPackedVector2();
-                            WeaponDisplayPlayer modPlayer = Main.player[whoAmI].GetModPlayer<WeaponDisplayPlayer>();
-                            modPlayer.HitboxPosition = HitboxPosition;
+                            PlayerSlash modPlayer = Main.player[whoAmI].GetModPlayer<PlayerSlash>();
+                            modPlayer.DrawPos = HitboxPosition;
 
                             ModPacket packet = WeaponDisplay.Instance.GetPacket();
                             packet.Write((byte)MessageType.Hitbox);
@@ -62,17 +63,18 @@ namespace WeaponDisplay
                 {
                     case MessageType.BasicStats:
                         {
-                            bool negativeDir = reader.ReadBoolean();
-                            float rotationForShadow = reader.ReadSingle();
-                            float kValue = reader.ReadSingle();
-                            bool UseSlash = reader.ReadBoolean();
+                            //bool negativeDir = reader.ReadBoolean();
+                            //float rotationForShadow = reader.ReadSingle();
+                            //float kValue = reader.ReadSingle();
+                            //bool UseSlash = reader.ReadBoolean();
+                            float mouseToPlayerRot = reader.ReadSingle();
                             int playerIndex = reader.ReadByte();
 
-                            WeaponDisplayPlayer modPlayer = Main.player[playerIndex].GetModPlayer<WeaponDisplayPlayer>();
-                            modPlayer.negativeDir = negativeDir;
-                            modPlayer.rotationForShadow = rotationForShadow;
-                            modPlayer.kValue = kValue;
-                            modPlayer.UseSlash = UseSlash;
+                            PlayerSlash modPlayer = Main.player[playerIndex].GetModPlayer<PlayerSlash>();
+                            modPlayer.MouseToPlayerRot = mouseToPlayerRot;
+                            //modPlayer.rotationForShadow = rotationForShadow;
+                            //modPlayer.kValue = kValue;
+                            //modPlayer.UseSlash = UseSlash;
                             return;
                         }
                     case MessageType.Hitbox:
@@ -80,8 +82,8 @@ namespace WeaponDisplay
                             var HitboxPosition = reader.ReadPackedVector2();
                             int playerIndex = reader.ReadByte();
 
-                            WeaponDisplayPlayer modPlayer = Main.player[playerIndex].GetModPlayer<WeaponDisplayPlayer>();
-                            modPlayer.HitboxPosition = HitboxPosition;
+                            PlayerSlash modPlayer = Main.player[playerIndex].GetModPlayer<PlayerSlash>();
+                            modPlayer.DrawPos = HitboxPosition;
                             return;
                         }
                 }

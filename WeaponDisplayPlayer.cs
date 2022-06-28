@@ -6,10 +6,10 @@ namespace WeaponDisplay
 {
     public class WeaponDisplayPlayer : ModPlayer
     {
-        public List<Vector2> itemOldPositions = new();
-        public float kValue;
-        public bool negativeDir;
-        public float rotationForShadow;//这些应该是都没用了
+        //public List<Vector2> itemOldPositions = new();
+        //public float kValue;
+        //public bool negativeDir;
+        //public float rotationForShadow;//这些应该是都没用了
 
         //public override void PreUpdate() {
         //    if (Player.itemAnimation == 1) {
@@ -195,11 +195,11 @@ namespace WeaponDisplay
         /// <summary>
         /// 刀光碰撞箱相对玩家的坐标，为了适配联机把原来写的改了一下
         /// </summary>
-        public Vector2 HitboxPosition = Vector2.Zero;
+        //public Vector2 HitboxPosition = Vector2.Zero;
         /// <summary>
         /// 该玩家是否使用斩击特效，为了联机同步写的
         /// </summary>
-        public bool UseSlash;
+        //public bool UseSlash;
 
         /*public override void DrawEffects(PlayerDrawSet drawInfo, ref float r, ref float g, ref float b, ref float a, ref bool fullBright)
         {
