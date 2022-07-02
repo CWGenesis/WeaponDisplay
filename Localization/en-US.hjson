@@ -34,21 +34,21 @@ Mods: {
 			19:Cancel the effect of the new slashing effect on tools
 			20:Yes, to cancel the effect of the new slashing effect on the tool, No, not cancel, the default is No
 			23:The type of Item light effect in world
-			New1:武器的挥砍尺寸
-			New2:调整武器的挥砍尺寸
-			New3:刀光削减速度
-			New4:越小刀光拖得越长,调到最大刀光就没了
-			New5:刀光饱和度
-			New6:在默认的饱和度的基础上进行调整,只对刀光有效
-			New7:刀光透明度
-			New8:调整刀光的透明度
-			New9:刀光种类
-			New10:选择不同的刀光
-			New11:武器背显开关
-			New12:是,以开启武器在玩家背后显示,否,以取消.默认为是
-			New13:人物界面武器背显开关
-			New14:"是,以开启在人物选择界面在人物背后显示物品栏第一把武器的功能,否,以取消.默认为是\n(物品栏第一格会被忽略，因为某些讨厌的原因)"
-		}
+			New1:Weapon slash size 
+			New2:Adjust the slash size of the weapon
+			New3:Slash effect cutting speed
+			New4:The smaller this value is, the longer the slash effect tail will drag, and when this value is set to maximum, the slash effect will disappear
+			New5:Slash effect saturation
+			New6:Adjust from the default saturation, only for slash effect tail
+			New7:Slash effect transparency
+			New8:Adjust the transparency of Slash effect tail
+			New9:Slash effect type
+			New10:Select a different Slash effect
+			New11:Weapon display switch
+			New12:Yes, to turn on the weapon shown behind the player, No, to cancel. Default is Yes
+			New13:Weapon display switch of character interface
+			New14:" Yes, to enable display of the first weapon in inventory behind the character in the character selection screen, No, to disable. Default is  Yes\n(the first pane of the inventory is ignored for some annoying reason)"		
+			}
 		ConfigurationServer:{
 			Label:Gameplay Settings
 			
@@ -57,12 +57,12 @@ Mods: {
 			HitboxTooltip:Yes, to enable a new hitbox for the weapon, no, to use the vanilla hitbox. Default is Yes
 			AttackablesName:Melee Slash Attackable Enemies Amount
 			AttackablesTooltip:Maximum number of enemies that can be damaged at one swing of the weapon.
-			New1:武器挥砍角度
-			New2:调整武器的挥砍角度
-			New3:武器挥砍角度最大偏移
-			New4:此值大于零时,每次挥砍将出现小于此值的偏移
-			New5:武器挥舞跟随鼠标
-			New6:开启后,鼠标随武器快速摆动可以加大武器的挥舞范围(也可能减小)
+			New1:Weapon slash Angle
+			New2:Adjust the Angle of the weapon's slash
+			New3:Maximum offset of weapon swing Angle
+			New4:When this value is greater than zero, each slash will be offset less than this value
+			New5:Weapon slash follows mouse
+			New6:When enabled, the mouse moves quickly with the weapon to increase (and possibly decrease) the swing range of the weapon.
 
 			Parry:Parry Settings
 			ParryName:Weapon Parry
